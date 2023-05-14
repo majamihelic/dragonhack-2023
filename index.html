@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="stil.css">
+</head>
+
+<body>
+
+    <div>
+        <h2>FONT</h2><br>
+        <p>
+            Pick a font:<br>
+            <select name="font" id="font">
+                <option value="default" id="default">default</option>
+                <option value="comicsans" id="comicsans">Comic Sans</option>
+                <option value="hobostd" id="hobostd">Hobo Std</option>
+                <option value="tvoja" id="tvoja">tvoja</option>
+                <option value="mami" id="mami">mami</option>
+                <option value="ligma" id="ligma">ligma</option>
+            </select><br>
+
+            <label for="bionic">Bionic: </label>
+            <input type="checkbox" id="bionic" name="bionic" value="bionic"><br>
+        </p>
+        <p>
+            Choose your size: <br>
+            <input type="range" min="10" max="100" value="24" class="slider" id="size"><br>
+
+            Choose the spacing: <br>
+            <input type="range" min="1" max="20" value="2" class="slider" id="spacing">
+            <br>
+
+            Choose the line spacing: <br>
+            <input type="range" min="30" max="100" value="30" class="slider" id="line">
+            <br>
+        </p>
+
+        
+        <p>
+            Red: <br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="FR">
+            <br>
+
+            Green: <br>
+
+            <input type="range" min="0" max="255" value="0" class="slider" id="FG">
+            <br>
+
+            Blue: <br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="FB">
+            <br>
+        </p>
+    </div>
+    <div>
+        <h2>BACKGROUND</h2><br>
+
+        <div id="barveozadja">
+            <canvas class="barva" id="bela" width="50" height="70"></canvas>
+            <canvas class="barva" id="crna" width="50" height="70"></canvas>
+            <canvas class="barva" id="krem" width="50" height="70"></canvas>
+        </div>
+
+        <p>
+            Red: <br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="BR">
+            <br>
+
+            Green: <br>
+
+            <input type="range" min="0" max="255" value="0" class="slider" id="BG">
+            <br>
+
+            Blue: <br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="BB">
+            <br>
+        </p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

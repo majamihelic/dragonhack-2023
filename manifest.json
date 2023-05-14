@@ -1,0 +1,40 @@
+{
+  "name": "disleksija projektcic <3",
+  "description": "pac nardi lazi brt, brt",
+  "version": "1.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "disleksija.png",
+    "48": "disleksija.png",
+    "128": "disleksija.png"
+  } ,
+
+  "action": {
+    "default_popup": "index.html"
+  },
+
+
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["script.js"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage",
+    "scripting",
+    "contextMenus",
+    "bookmarks"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ]
+
+}

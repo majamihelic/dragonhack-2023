@@ -1,0 +1,101 @@
+body {
+    background-color: lightblue;
+    min-width: 400px;
+}
+
+@font-face {
+    font-family: 'dyslexie';
+    src: url('/fonts/OpenDyslexic-Regular.otf') format('opentype');
+}
+
+.dyslexie {
+    font-family: 'dyslexie', sans-serif;
+    font-size: 20px;
+    height: 7%;
+    width: 10%;
+    border-radius: 0px;
+    background-color: #ffffff;
+
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: "Comic Sans MS", "Comic Sans";
+    font-size: 20px;
+    text-align: center;
+}
+
+#siz {
+    font-family: "Comic Sans MS", "Comic Sans";
+    font-size: 20px;
+    outline-style: solid;
+    outline-width: 2px;
+    border-radius: 0px;
+    width: 13%;
+
+}
+
+#bionic {
+    height: 25px;
+    width: 25px;
+}
+
+#font {
+    font-family: "Comic Sans MS", "Comic Sans";
+    font-size: 20px;
+    height: 7%;
+    width: 40%;
+    border-radius: 0px;
+    background-color: #ffffff;
+}
+
+.slider {
+    width: 60%;
+    height: 30px;
+    outline-style: solid;
+    outline-width: 2px;
+    background: #ffffff;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+
+
+.slider:hover {
+    opacity: 1;
+}
+
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 25px;
+    border-radius: 0px;
+    outline: none;
+    background: #05265d;
+    cursor: pointer;
+}
+
+
+#bela {
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
+#crna {
+    background-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
+#krem {
+    background-color: #f4f4d7;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
