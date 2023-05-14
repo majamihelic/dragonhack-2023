@@ -120,39 +120,12 @@ chrome.runtime.onMessage.addListener(
         }
         else if(request.message === "fontbela" ) {
             document.body.style.color = "white";
-            for(p of document.getElementsByTagName("p")) {
-                p.style.color = "white";
-            }
-            for(div of document.getElementsByTagName("div")) {
-                div.style.color = "white";
-            }
-            for(span of document.getElementsByTagName("span")) {
-                span.style.color = "white";
-            }
         }
         else if(request.message === "fontcrna" ) {
-            //document.body.style.color = "black";
-            for(p of document.getElementsByTagName("p")) {
-                p.style.color = "black";
-            }
-            for(div of document.getElementsByTagName("div")) {
-                div.style.color = "black";
-            }
-            for(span of document.getElementsByTagName("span")) {
-                span.style.color = "black";
-            }
+            document.body.style.color = "black";
         }
         else if(request.message === "fonttmodra" ) {
             document.body.style.color = "#000099";
-            for(p of document.getElementsByTagName("p")) {
-                p.style.color = "#000099";
-            }
-            for(div of document.getElementsByTagName("div")) {
-                div.style.color = "#000099";
-            }
-            for(span of document.getElementsByTagName("span")) {
-                span.style.color = "#000099";
-            }
         }
 
         //bionic reading

@@ -103,6 +103,7 @@ var FBslider = document.getElementById("FB");
 var BRslider = document.getElementById("BR");
 var BGslider = document.getElementById("BG");
 var BBslider = document.getElementById("BB");
+
 Sslider.oninput = function () {
     //document.body.style.fontSize = this.value + "px";
     let ssslidervalue = "ss_" + String(Number(this.value));
@@ -144,6 +145,7 @@ FRslider.oninput = function () {
     }
     B += Number(FBslider.value).toString(16);
     val = "fc_#" + R + G + B;
+    //alert(val);
     chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
         var aktivenTab = tabs[0];
         chrome.tabs.sendMessage(aktivenTab.id, {message: val});
