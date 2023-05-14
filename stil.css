@@ -18,8 +18,16 @@ body {
 
 }
 
-h1 {
+h2 {
     color: white;
+    text-align: center;
+}
+
+#barveozadja {
+    text-align: center;
+}
+
+#barvefonta {
     text-align: center;
 }
 
@@ -95,6 +103,24 @@ p {
 }
 #krem {
     background-color: #f4f4d7;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
+#belaf {
+     background-color: white;
+     border-style: solid;
+     border-width: 1px;
+     border-radius: 5px;
+ }
+#crnaf {
+    background-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
+#tmodraf {
+    background-color: #000099;
     border-style: solid;
     border-width: 1px;
     border-radius: 5px;

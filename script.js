@@ -9,8 +9,11 @@ document.getElementById('font').addEventListener('change', function comicsansmes
             chrome.tabs.sendMessage(aktivenTab.id, {message: "comicsansstart"});
         });
     }
-    else if(document.getElementById('font').value == "hobostd") {
-        alert("hobostd");
+    else if(document.getElementById('font').value == "opendyslexic") {
+        chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
+            var aktivenTab = tabs[0];
+            chrome.tabs.sendMessage(aktivenTab.id, {message: "opendyslexic"});
+        });
     }
 });
 
@@ -30,6 +33,65 @@ document.getElementById("bionic").addEventListener("change", function bionic() {
 });
 
 
+//FONT SEM DODALA ZDAJ
+document.getElementById("belaf").addEventListener("click", function fontbela() {
+    chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
+        var aktivenTab = tabs[0];
+        document.getElementById("FR").value = 255;
+        document.getElementById("FG").value = 255;
+        document.getElementById("FB").value = 255;
+        chrome.tabs.sendMessage(aktivenTab.id, {message: "fontbela"});
+    });
+});
+document.getElementById("crnaf").addEventListener("click", function fontcrna() {
+    chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
+        var aktivenTab = tabs[0];
+        document.getElementById("FR").value = 0;
+        document.getElementById("FG").value = 0;
+        document.getElementById("FB").value = 0;
+        chrome.tabs.sendMessage(aktivenTab.id, {message: "fontcrna"});
+    });
+});
+document.getElementById("tmodraf").addEventListener("click", function fonttmodra() {
+    chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
+        var aktivenTab = tabs[0];
+        document.getElementById("FR").value = 0;
+        document.getElementById("FG").value = 0;
+        document.getElementById("FB").value = 153;
+        chrome.tabs.sendMessage(aktivenTab.id, {message: "fonttmodra"});
+    });
+});
+
+//ozadje
+document.getElementById("krem").addEventListener("click", function ozadjekrem() {
+    chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
+        var aktivenTab = tabs[0];
+        document.getElementById("BR").value = 249;
+        document.getElementById("BG").value = 249;
+        document.getElementById("BB").value = 210;
+        chrome.tabs.sendMessage(aktivenTab.id, {message: "ozadjekrem"});
+    });
+});
+
+document.getElementById("bela").addEventListener("click", function ozadjebelo() {
+    chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
+        var aktivenTab = tabs[0];
+        document.getElementById("BR").value = 255;
+        document.getElementById("BG").value = 255;
+        document.getElementById("BB").value = 255;
+        chrome.tabs.sendMessage(aktivenTab.id, {message: "ozadjebelo"});
+    });
+});
+
+document.getElementById("crna").addEventListener("click", function ozadjecrno() {
+    chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
+        var aktivenTab = tabs[0];
+        document.getElementById("BR").value = 0;
+        document.getElementById("BG").value = 0;
+        document.getElementById("BB").value = 0;
+        chrome.tabs.sendMessage(aktivenTab.id, {message: "ozadjecrno"});
+    });
+});
 
 //barva fontov in odzadja
 var Sslider = document.getElementById("size");
@@ -42,14 +104,28 @@ var BRslider = document.getElementById("BR");
 var BGslider = document.getElementById("BG");
 var BBslider = document.getElementById("BB");
 Sslider.oninput = function () {
-    document.body.style.fontSize = this.value + "px";
-    //document.body.style.color = "#" + Number(2 * this.value).toString(16) + "0000";
+    //document.body.style.fontSize = this.value + "px";
+    let ssslidervalue = "ss_" + String(Number(this.value));
+    chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
+        var aktivenTab = tabs[0];
+        chrome.tabs.sendMessage(aktivenTab.id, {message: ssslidervalue});
+    });
 }
 SPslider.oninput = function () {
-    document.body.style.letterSpacing = this.value + "px";
+    //document.body.style.letterSpacing = this.value + "px";
+    let spslidervalue = "sp_" + String(Number(this.value));
+    chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
+        var aktivenTab = tabs[0];
+        chrome.tabs.sendMessage(aktivenTab.id, {message: spslidervalue});
+    });
 }
 LNslider.oninput = function () {
-    document.body.style.lineHeight = this.value + "px";
+    //document.body.style.lineHeight = this.value + "px";
+    let lnslidervalue = "ln_" + String(Number(this.value));
+    chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
+        var aktivenTab = tabs[0];
+        chrome.tabs.sendMessage(aktivenTab.id, {message: lnslidervalue});
+    });
 }
 FRslider.oninput = function () {
     var R = "";
@@ -67,7 +143,11 @@ FRslider.oninput = function () {
         B = "0"
     }
     B += Number(FBslider.value).toString(16);
-    document.body.style.color = "#" + R + G + B;
+    val = "fc_#" + R + G + B;
+    chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
+        var aktivenTab = tabs[0];
+        chrome.tabs.sendMessage(aktivenTab.id, {message: val});
+    });
 }
 FGslider.oninput = function () {
     var R = "";
@@ -85,7 +165,11 @@ FGslider.oninput = function () {
         B = "0"
     }
     B += Number(FBslider.value).toString(16);
-    document.body.style.color = "#" + R + G + B;
+    val = "fc_#" + R + G + B;
+    chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
+        var aktivenTab = tabs[0];
+        chrome.tabs.sendMessage(aktivenTab.id, {message: val});
+    });
 }
 FBslider.oninput = function () {
     var R = "";
@@ -103,7 +187,11 @@ FBslider.oninput = function () {
         B = "0"
     }
     B += Number(FBslider.value).toString(16);
-    document.body.style.color = "#" + R + G + B;
+    val = "fc_#" + R + G + B;
+    chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
+        var aktivenTab = tabs[0];
+        chrome.tabs.sendMessage(aktivenTab.id, {message: val});
+    });
 }
 BRslider.oninput = function () {
     var R = "";
@@ -121,7 +209,11 @@ BRslider.oninput = function () {
         B = "0"
     }
     B += Number(BBslider.value).toString(16);
-    document.body.style.backgroundColor = "#" + R + G + B;
+    val = "bc_#" + R + G + B;
+    chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
+        var aktivenTab = tabs[0];
+        chrome.tabs.sendMessage(aktivenTab.id, {message: val});
+    });
 }
 BGslider.oninput = function () {
     var R = "";
@@ -139,7 +231,11 @@ BGslider.oninput = function () {
         B = "0"
     }
     B += Number(BBslider.value).toString(16);
-    document.body.style.backgroundColor = "#" + R + G + B;
+    val = "bc_#" + R + G + B;
+    chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
+        var aktivenTab = tabs[0];
+        chrome.tabs.sendMessage(aktivenTab.id, {message: val});
+    });
 }
 BBslider.oninput = function () {
     var R = "";
@@ -157,5 +253,9 @@ BBslider.oninput = function () {
         B = "0"
     }
     B += Number(BBslider.value).toString(16);
-    document.body.style.backgroundColor = "#" + R + G + B;
+    val = "bc_#" + R + G + B;
+    chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
+        var aktivenTab = tabs[0];
+        chrome.tabs.sendMessage(aktivenTab.id, {message: val});
+    });
 }

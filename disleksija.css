@@ -8,11 +8,23 @@
 }
 
 .dyslexie {
-    font-family: 'dyslexie', arial;
-    font-size: 20px;
-    height: 7%;
-    width: 10%;
-    border-radius: 0px;
-    background-color: #ffff;
+    font-family: 'dyslexie', arial !important;
 
+}
+
+.ozadjekrem {
+    background-color: #f9f9d2;
+    border-color: #f9f9d2;
+}
+.ozadjebelo {
+    background-color: white;
+    border-color: white;
+}
+.ozadjecrno {
+    background-color: black;
+    border-color: black;
+}
+
+.hobostd {
+    font-family: 'hobo';
 }

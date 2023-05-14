@@ -14,9 +14,6 @@
             <select name="font" id="font">
                 <option value="default" id="default">default</option>
                 <option value="comicsans" id="comicsans">Comic Sans</option>
-                <option value="hobostd" id="hobostd">Hobo Std</option>
-                <option value="tvoja" id="tvoja">tvoja</option>
-                <option value="mami" id="mami">mami</option>
                 <option value="ligma" id="ligma">ligma</option>
             </select><br>
 
@@ -36,7 +33,12 @@
             <br>
         </p>
 
-        
+        <div id="barvefonta">
+            <canvas class="barvaf" id="belaf" width="30" height="30"></canvas>
+            <canvas class="barvaf" id="crnaf" width="30" height="30"></canvas>
+            <canvas class="barvaf" id="tmodraf" width="30" height="30"></canvas>
+        </div>
+
         <p>
             Red: <br>
             <input type="range" min="0" max="255" value="0" class="slider" id="FR">
@@ -55,7 +57,7 @@
     <div>
         <h2>BACKGROUND</h2><br>
 
-        <div id="barveozadja">
+        <div id="barveozadja" style="align-content: center">
             <canvas class="barva" id="bela" width="50" height="70"></canvas>
             <canvas class="barva" id="crna" width="50" height="70"></canvas>
             <canvas class="barva" id="krem" width="50" height="70"></canvas>
